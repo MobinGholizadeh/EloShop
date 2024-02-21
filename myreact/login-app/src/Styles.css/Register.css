@@ -1,0 +1,31 @@
+
+
+.register-container {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  }
+  
+  .register-form {
+    position: relative; 
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); 
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .register-form h2 {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    margin: 20px; 
+    font-size: 24px; 
+    color: #007bff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+  }
+  
