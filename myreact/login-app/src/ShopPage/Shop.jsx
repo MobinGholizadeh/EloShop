@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Menu from "./Menu";
-import Tabs from "./Tabs";
 import ProductList from "./ProductList";
 import "../Styles.css/App.css";
 import { connect } from "react-redux";

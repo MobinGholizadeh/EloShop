@@ -1,22 +1,39 @@
 import React from "react";
-import { Tabs as MyTabs } from "antd";
+import { Tabs } from "antd";
+import ProductList from "./ProductList";
+import ProductDetail from "./ProductDetail";
 
-const Tabs = ({ tabList }) => {
-  const { TabsPanel } = Tabs;
-  return (
-    <MyTabs defaultActiveKey="1" className="anta-regular">
-      {tabList?.map((item) => {
-        return (
-          // adding ANTD closable
-          <TabsPanel
-            closable={false}
-            tab={item?.title}
-            key={item?.key}
-          ></TabsPanel>
-        );
-      })}
-    </MyTabs>
-  );
+const { TabPane } = Tabs;
+
+class CenterManagement extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <>
+        <div className="row">
+          <div className="col-12" style={{ marginTop: 3 }}>
+            <Tabs type="card" style={{ marginRight: -13 }}>
+              <TabPane tab={t("ProductsList")} key="1">
+                <ProductList />
+              </TabPane>
+              <TabPane tab={t("ProductDetail")} key="2">
+                <ProductDetail />
+              </TabPane>
+            </Tabs>
+          </div>
+        </div>
+      </>
+    );
+  }
+}
+
+const mapState = (state) => {
+  return {};
+};
+const mapDis = (dispatch) => {
+  return {};
 };
 
-export default Tabs;
+export default CenterManagement;
