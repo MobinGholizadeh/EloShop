@@ -13,36 +13,36 @@ const Login = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const { username, password} = formData;
+  const { username, password } = formData;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  
+
   const tryLogin = () => {
     setLoading(true);
 
-    axios.post(
-      `https://localhost:44325/api/Auth/login`,
-      formData,
-    ).then(response=>{
-      setLoading(false);
-      Swal.fire({
-        title: "We said",
-        text: response.data.message ?? "information",
-        icon: response.data.success ? "success" : "error",
-      });
+    axios
+      .post(`https://localhost:44325/api/Auth/login`, formData)
+      .then((response) => {
+        setLoading(false);
+        Swal.fire({
+          title: "We said",
+          text: response.data.message ?? "information",
+          icon: response.data.success ? "success" : "error",
+        });
 
-      if(response.data.success){
-         setTimeout(() => {
-          window.location = "/Shop";
-         }, 1000);
-      }
-    }).catch(error => {
-      console.error(error);
-      
-      setLoading(false);
-    });
+        if (response.data.success) {
+          setTimeout(() => {
+            window.location = "/Shop";
+          }, 1000);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+
+        setLoading(false);
+      });
   };
 
   return (

@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Card, Col, Row } from "antd";
+import { Button, Card, Col, Row } from "antd";
 import axios from "axios";
-import { connect } from "react-redux";
-import { changePage, displayProductDetails } from "../Redux/Actions";
+import React, { useEffect, useState } from "react";
 
-const ProductList = ({ changePage, displayProductDetails }) => {
+const ProductList = ({}) => {
   const [products, setProducts] = useState([]);
-  const handleCardClick = (product) => {
-    displayProductDetails(product);
-    changePage("ProductDetail");
-  };
 
   useEffect(() => {
     fetchProducts();
@@ -55,8 +49,9 @@ const ProductList = ({ changePage, displayProductDetails }) => {
     <div className="anta-regular">
       <h2>Product List</h2>
       <Row>{renderProducts()}</Row>
+      {/* <Button onClick={() => addTab({ key: "home" })}>add tab</Button> */}
     </div>
   );
 };
 
-export default connect(null, { changePage })(ProductList);
+export default ProductList;

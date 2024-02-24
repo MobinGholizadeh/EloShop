@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 
 const ProductDetail = ({ selectedProduct }) => {
   return (
@@ -20,10 +19,4 @@ const ProductDetail = ({ selectedProduct }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    selectedProduct: state.selectedProduct,
-  };
-};
-
-export default connect(mapStateToProps)(ProductDetail);
+export default ProductDetail;
