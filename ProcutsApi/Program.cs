@@ -3,21 +3,22 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using MyShop.Data;
 using MyShop.Data.UserService;
+using ProcutsApi.Middleware;
+using ProcutsApi.Middleware.Api.Extensions;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
-{
-	builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
-}));
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<UserRepository>();
+builder.Services.AddMobinCors();
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 	.AddJwtBearer(op =>
 	{
@@ -43,7 +44,9 @@ if (app.Environment.IsDevelopment())
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
-app.UseCors("corsapp");
+app.UseMiddleware<OptionsMiddleware>();
+
+app.UseMobinCors();
 
 app.UseHttpsRedirection();
 

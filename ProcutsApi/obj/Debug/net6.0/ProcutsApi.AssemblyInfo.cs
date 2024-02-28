@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProcutsApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e295178e608d688120da97f6dbfa49281730e795")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6a6b59e1aebd1a67825df26f9afae5bb0a7fa1c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProcutsApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProcutsApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

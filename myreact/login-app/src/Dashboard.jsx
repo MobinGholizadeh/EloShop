@@ -1,38 +1,43 @@
-import { DashOutlined, UnorderedListOutlined } from "@ant-design/icons";
+import {
+  DollarTwoTone,
+  HomeTwoTone,
+  MehTwoTone,
+  ProfileTwoTone,
+} from "@ant-design/icons";
+import { Menu, Tabs } from "antd";
 import React from "react";
+import { connect } from "react-redux";
 import Home from "./Home";
-import ProductList from "./ShopPage/ProductList";
-import Tab1 from "./Tab1";
-import store from "./Redux/Store";
 import ProductTables from "./ProductTables";
 import { addTab, removeTab, setActiveKey } from "./Redux/Actions";
-import { Menu, Tabs } from "antd";
-import { connect } from "react-redux";
+import store from "./Redux/Store";
+import ProductList from "./ShopPage/ProductList";
+import Tab1 from "./Tab1";
 
 class Dashboard extends React.Component {
   menuTabItems = [
     {
       key: "home",
-      icon: <DashOutlined />,
+      icon: <HomeTwoTone />,
       label: "Home",
       component: <Home />,
     },
     {
       key: "product-list",
-      icon: <UnorderedListOutlined />,
+      icon: <DollarTwoTone />,
       label: "Products",
       component: <ProductList />,
     },
     {
-      key: "Will be edited",
-      icon: <UnorderedListOutlined />,
-      label: "Will be edited",
+      key: "Orders",
+      icon: <ProfileTwoTone />,
+      label: "Orders",
       component: <Tab1 />,
     },
     {
       key: "ProductTables",
-      icon: <UnorderedListOutlined />,
-      label: "Admin Product Tables",
+      icon: <MehTwoTone />,
+      label: "Tables",
       component: <ProductTables />,
     },
   ];

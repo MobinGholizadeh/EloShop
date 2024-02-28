@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dzcBygw7Z5x/ndK+wFVi0ajVigXIk3zG8nkEBoCcTMKe9pfYvvRCLUVc6RXEAcq1cT+NVnWuLHjN325HScrBtg==",
+  "dgSpecHash": "WantFwbObMbUG8QvBeUpcKcRuCbpnYVkfK7BC0yo/HreUUJhpnaEuxbHbuIZEs1+Z+Ru3B4wCftHcrOlLkSLig==",
   "success": true,
-  "projectFilePath": "C:\\DevCardD\\MyShop.Data\\ProcutsApi\\ProcutsApi.csproj",
+  "projectFilePath": "C:\\DevCardD\\MyShop.Data\\EloShop\\ProcutsApi\\ProcutsApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mobin\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Mobin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

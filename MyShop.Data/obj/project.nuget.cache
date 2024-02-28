@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GxBLCZPK4Zzxi1s+tC88hbggaI3RrMc6s0DVPh+NU24VDiw55tNXzw+rkxeOtl+lYJMonybWefLwpB5V+f79bw==",
+  "dgSpecHash": "RRlt5hKyRLCjZ/ireV3g+DsKakJGUsy2sMorvQjC6YVG+becM4mHhxZXumUSLrDWD9PgnCX0nyn+PkEoJPgnMg==",
   "success": true,
-  "projectFilePath": "C:\\DevCardD\\MyShop.Data\\MyShop.Data\\MyShop.Data.csproj",
+  "projectFilePath": "C:\\DevCardD\\MyShop.Data\\EloShop\\MyShop.Data\\MyShop.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mobin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Mobin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.26\\microsoft.aspnetcore.authentication.jwtbearer.6.0.26.nupkg.sha512",

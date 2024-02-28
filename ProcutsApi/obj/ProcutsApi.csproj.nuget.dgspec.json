@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DevCardD\\MyShop.Data\\ProcutsApi\\ProcutsApi.csproj": {}
+    "C:\\DevCardD\\MyShop.Data\\EloShop\\ProcutsApi\\ProcutsApi.csproj": {}
   },
   "projects": {
-    "C:\\DevCardD\\MyShop.Data\\MyShop.Data\\MyShop.Data.csproj": {
+    "C:\\DevCardD\\MyShop.Data\\EloShop\\MyShop.Data\\MyShop.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DevCardD\\MyShop.Data\\MyShop.Data\\MyShop.Data.csproj",
+        "projectUniqueName": "C:\\DevCardD\\MyShop.Data\\EloShop\\MyShop.Data\\MyShop.Data.csproj",
         "projectName": "MyShop.Data",
-        "projectPath": "C:\\DevCardD\\MyShop.Data\\MyShop.Data\\MyShop.Data.csproj",
+        "projectPath": "C:\\DevCardD\\MyShop.Data\\EloShop\\MyShop.Data\\MyShop.Data.csproj",
         "packagesPath": "C:\\Users\\Mobin\\.nuget\\packages\\",
-        "outputPath": "C:\\DevCardD\\MyShop.Data\\MyShop.Data\\obj\\",
+        "outputPath": "C:\\DevCardD\\MyShop.Data\\EloShop\\MyShop.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,14 +97,14 @@
         }
       }
     },
-    "C:\\DevCardD\\MyShop.Data\\ProcutsApi\\ProcutsApi.csproj": {
+    "C:\\DevCardD\\MyShop.Data\\EloShop\\ProcutsApi\\ProcutsApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DevCardD\\MyShop.Data\\ProcutsApi\\ProcutsApi.csproj",
+        "projectUniqueName": "C:\\DevCardD\\MyShop.Data\\EloShop\\ProcutsApi\\ProcutsApi.csproj",
         "projectName": "ProcutsApi",
-        "projectPath": "C:\\DevCardD\\MyShop.Data\\ProcutsApi\\ProcutsApi.csproj",
+        "projectPath": "C:\\DevCardD\\MyShop.Data\\EloShop\\ProcutsApi\\ProcutsApi.csproj",
         "packagesPath": "C:\\Users\\Mobin\\.nuget\\packages\\",
-        "outputPath": "C:\\DevCardD\\MyShop.Data\\ProcutsApi\\obj\\",
+        "outputPath": "C:\\DevCardD\\MyShop.Data\\EloShop\\ProcutsApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -125,8 +125,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\DevCardD\\MyShop.Data\\MyShop.Data\\MyShop.Data.csproj": {
-                "projectPath": "C:\\DevCardD\\MyShop.Data\\MyShop.Data\\MyShop.Data.csproj"
+              "C:\\DevCardD\\MyShop.Data\\EloShop\\MyShop.Data\\MyShop.Data.csproj": {
+                "projectPath": "C:\\DevCardD\\MyShop.Data\\EloShop\\MyShop.Data\\MyShop.Data.csproj"
               }
             }
           }
