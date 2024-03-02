@@ -2,7 +2,7 @@ import {
   DollarTwoTone,
   HomeTwoTone,
   MehTwoTone,
-  ProfileTwoTone,
+  ContactsTwoTone,
 } from "@ant-design/icons";
 import { Menu, Tabs } from "antd";
 import React from "react";
@@ -12,7 +12,8 @@ import ProductTables from "./ProductTables";
 import { addTab, removeTab, setActiveKey } from "./Redux/Actions";
 import store from "./Redux/Store";
 import ProductList from "./ShopPage/ProductList";
-import Tab1 from "./Tab1";
+import Users from "./Users";
+import UserTable from "./ChatSide/UsersTable";
 
 class Dashboard extends React.Component {
   menuTabItems = [
@@ -29,10 +30,10 @@ class Dashboard extends React.Component {
       component: <ProductList />,
     },
     {
-      key: "Orders",
-      icon: <ProfileTwoTone />,
-      label: "Orders",
-      component: <Tab1 />,
+      key: "Users",
+      icon: <ContactsTwoTone />,
+      label: "Users",
+      component: <UserTable />,
     },
     {
       key: "ProductTables",

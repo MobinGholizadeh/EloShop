@@ -36,6 +36,8 @@ public class ProductsController : ControllerBase
 		}
 	}
 
+
+
 	// GET 
 	[HttpGet]
 	public ActionResult GetProducts(string? name , int? id , int pageIndex = 1, int pageSize = 10)
