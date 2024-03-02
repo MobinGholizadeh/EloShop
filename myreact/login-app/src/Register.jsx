@@ -25,6 +25,11 @@ const Register = () => {
         text: response.data.message,
         icon: response.data.success ? "success" : "error",
       });
+      if (response.data.success) {
+        setTimeout(() => {
+          window.location = "/";
+        }, 1000);
+      }
       console.log(response.data);
     } catch (error) {
       console.error("Registration error:", error);

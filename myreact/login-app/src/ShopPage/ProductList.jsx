@@ -1,17 +1,21 @@
 import { Button, Card, Col, Row } from "antd";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { SearchBox } from "./SearchBox";
 
 const ProductList = ({}) => {
   const [products, setProducts] = useState([]);
+  const [name, setName] = useState("");
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [name]);
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("https://localhost:44325/api/Products");
+      const response = await axios.get(
+        "https://localhost:44325/api/Products?name=" + name
+      );
       setProducts(response.data);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -48,6 +52,7 @@ const ProductList = ({}) => {
   return (
     <div className="anta-regular">
       <h2>Product List</h2>
+      <SearchBox onChangeText={(e) => setName(e.target.value)} />
       <Row>{renderProducts()}</Row>
       {/* <Button onClick={() => addTab({ key: "home" })}>add tab</Button> */}
     </div>

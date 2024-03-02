@@ -1,3 +1,4 @@
+import { SearchBox } from "./ShopPage/SearchBox";
 import { Form, Popconfirm, Table, Typography } from "antd";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -11,12 +12,14 @@ const ProductsTable = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(5);
   const [total, setTotal] = useState(0);
+  const [id, setId] = useState();
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://localhost:44325/api/Products?PageIndex=${currentPage}&pageSize=${pageSize}`
+          `https://localhost:44325/api/Products?PageIndex=${currentPage}&pageSize=${pageSize}&id=` +
+            id
         );
         setData(response.data);
         let pag = JSON.parse(response.headers["x-pagination"]);
@@ -30,7 +33,7 @@ const ProductsTable = () => {
     };
 
     fetchData();
-  }, [currentPage, pageSize]);
+  }, [currentPage, pageSize, id]);
 
   const isEditing = (record) => record.key === editingKey;
   const edit = (record) => {
@@ -146,6 +149,7 @@ const ProductsTable = () => {
 
   return (
     <Form form={form} component={false}>
+      <SearchBox onChangeText={(e) => setId(e.target.value)} />
       <Table
         components={{
           body: { cell: EditableCell },

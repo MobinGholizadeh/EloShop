@@ -62,18 +62,44 @@ class Dashboard extends React.Component {
     return (
       <div className="anta-regular">
         <div style={{ display: "flex" }}>
-          <div style={{ width: 200 }}>
-            <Menu
-              style={{
-                width: 256,
-              }}
-              defaultSelectedKeys={["1"]}
-              defaultOpenKeys={["sub1"]}
-              mode={"inline"}
-              theme={"light"}
-              onClick={this.onClickMenu}
-              items={this.menuTabItems}
-            />
+          <div
+            style={{
+              width: 200,
+              height: "100vh",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <div className="h-100">
+              <Menu
+                style={{
+                  width: 256,
+                  height: "90vh",
+                }}
+                defaultSelectedKeys={["1"]}
+                defaultOpenKeys={["sub1"]}
+                mode={"inline"}
+                theme={"light"}
+                onClick={this.onClickMenu}
+                items={this.menuTabItems}
+              />
+              <div
+                style={{
+                  height: "10vh",
+                  width: 256,
+                  backgroundColor: "#ffffff",
+                }}
+              >
+                <a
+                  href="/Login"
+                  style={{ display: "block" }}
+                  className="btn btn-block btn-danger"
+                >
+                  Log Out
+                </a>
+              </div>
+            </div>
+            <div className="w-100"></div>
           </div>
           <div style={{ flex: 1, marginLeft: 100 }}>
             <Tabs
@@ -97,9 +123,6 @@ class Dashboard extends React.Component {
               }
             />
           </div>
-        </div>
-        <div>
-          <a href="/Login">Log Out</a>
         </div>
       </div>
     );

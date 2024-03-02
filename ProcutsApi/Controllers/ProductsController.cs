@@ -38,11 +38,19 @@ public class ProductsController : ControllerBase
 
 	// GET 
 	[HttpGet]
-	public ActionResult GetProducts(int pageIndex = 1, int pageSize = 10)
+	public ActionResult GetProducts(string? name , int? id , int pageIndex = 1, int pageSize = 10)
 	{
 		try
 		{
 			var products = _context.Products.AsQueryable();
+			if (!string.IsNullOrWhiteSpace(name))
+				products = products.Where(x => x.ProductName.Contains(name));
+
+			if (id > 0)
+			{
+				products = products.Where(x => x.ProductId == id);
+			}
+				
 			var pagination = PagedList<Product>.ToPagedList(products, pageIndex, pageSize);
 			var metadata = new
 			{

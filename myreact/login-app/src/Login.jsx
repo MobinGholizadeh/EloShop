@@ -34,7 +34,7 @@ const Login = () => {
 
         if (response.data.success) {
           setTimeout(() => {
-            window.location = "/Shop";
+            window.location = "/";
           }, 1000);
         }
       })
